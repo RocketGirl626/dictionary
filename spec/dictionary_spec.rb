@@ -44,6 +44,15 @@ describe(Word) do
       expect(Word.all()).to(eq([test_word]))
     end
   end
+
+  describe('#add_definition') do
+    it('adds a definition to a word') do
+      test_word = Word.new('run')
+      test_definition = Definition.new('To operate a machine.')
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions()).to(eq([test_definition]))
+    end
+  end
 end
 
 describe(Definition) do

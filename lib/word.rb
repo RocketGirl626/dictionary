@@ -25,4 +25,8 @@ class Word
   define_method(:save) do
     @@words.push(self)
   end
+
+  define_method(:add_definition) do |definition|
+    @definitions.push(definition)
+  end
 end
