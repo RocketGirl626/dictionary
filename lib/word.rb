@@ -19,7 +19,7 @@ class Word
   end
 
   define_singleton_method(:clear) do
-    @@words - []
+    @@words = []
   end
 
   define_method(:save) do
