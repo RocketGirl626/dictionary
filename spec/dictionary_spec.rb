@@ -54,7 +54,16 @@ describe(Definition) do
 
   describe('#definition') do
     it('returns the definition of the word') do
-      @definition
+      test_definition = Definition.new('To operate a machine.')
+      expect(test_definition.definition()).to(eq('To operate a machine.'))
+    end
+  end
+
+  describe('#save') do
+    it('adds a definition to the array of definitions') do
+      test_definition = Definition.new('To operate a machine.')
+      test_definition.save()
+      expect(Definition.all()).to(eq([test_definition]))
     end
   end
 end
