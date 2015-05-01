@@ -1,0 +1,8 @@
+<h1>Welcome to the Dictionary!</h1>
+<h3>Here are all the words in your dictionary:</h3>
+
+<ul>
+  <% @words.each() do |word| %>
+  <li><a href="/"><%= word.word() %></a></li>
+  <% end %>
+</ul>
