@@ -1,5 +1,6 @@
 require('rspec')
 require('word')
+require('definition')
 
 
 describe(Word) do
@@ -41,6 +42,19 @@ describe(Word) do
       test_word = Word.new('run')
       test_word.save()
       expect(Word.all()).to(eq([test_word]))
+    end
+  end
+end
+
+describe(Definition) do
+
+  before() do
+    Word.clear()
+  end
+
+  describe('#definition') do
+    it('returns the definition of the word') do
+      @definition
     end
   end
 end
