@@ -49,7 +49,7 @@ end
 describe(Definition) do
 
   before() do
-    Word.clear()
+    Definition.clear()
   end
 
   describe('#definition') do
@@ -64,6 +64,20 @@ describe(Definition) do
       test_definition = Definition.new('To operate a machine.')
       test_definition.save()
       expect(Definition.all()).to(eq([test_definition]))
+    end
+  end
+
+  describe('.all') do
+    it('is empty at first') do
+      expect(Definition.all()).to(eq([]))
+    end
+  end
+
+  describe('.clear') do
+    it('empties out all of the saved definitions') do
+      Definition.new('To operate a machine.').save()
+      Definition.clear()
+      expect(Definition.all()).to(eq([]))
     end
   end
 end
