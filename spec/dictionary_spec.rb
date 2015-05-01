@@ -37,6 +37,16 @@ describe(Word) do
     end
   end
 
+  describe('.find') do
+    it('returns a specific word') do
+      test_word = Word.new('run')
+      test_word.save()
+      test_word2 = Word.new('scamper')
+      test_word2.save()
+      expect(Word.find(test_word.word())).to(eq(test_word))
+    end
+  end
+
   describe('#save') do
     it('adds a word to the array of saved words') do
       test_word = Word.new('run')

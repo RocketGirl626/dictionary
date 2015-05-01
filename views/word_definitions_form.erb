@@ -1,0 +1,10 @@
+<h1>Add a definition for <%= @word.word() %></h1>
+
+<form action="/definitions" method="post">
+  <div class="form-group">
+    <label for="definition">Definition:</label>
+    <input id="definition" name="definition" type="text">
+  </div>
+
+  <button type="submit">Add Definition</button>
+</form>
