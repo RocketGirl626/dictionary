@@ -14,4 +14,10 @@ describe(Word) do
     end
   end
 
+  describe('#definitions') do
+    it('it returns an empty array of definitions') do
+      test_word = Word.new('run')
+      expect(test_word.definitions()).to(eq([]))
+    end
+  end
 end
